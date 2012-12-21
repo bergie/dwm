@@ -1,0 +1,14 @@
+#!/bin/sh
+feh --bg-scale ~/Pictures/1280px-Manuscript-Alexander-Highsmith.jpeg
+stalonetray &
+dropbox start
+nm-applet &
+xfce4-power-manager
+/usr/local/bin/dwmstatus &
+
+while true; do
+  # Log stderror to a file 
+  dwm 2> ~/.dwm.log
+  # No error logging
+  #dwm >/dev/null 2>&1
+done
